@@ -43,32 +43,13 @@ export default function LinkBioPage({ client: c }: { client: Client }) {
 
       <div style={{ width: "100%", maxWidth: 440, padding: "0 22px", boxSizing: "border-box" }}>
 
-        {/* top bar */}
-        <div className="rise" style={{ display: "flex", alignItems: "center", justifyContent: "space-between", padding: "26px 2px 0" }}>
-          <div style={{ display: "flex", alignItems: "center", gap: 10 }}>
-            <div style={{ width: 38, height: 38, borderRadius: 11, background: `linear-gradient(150deg, ${accent}, ${accentDark})`, display: "flex", alignItems: "center", justifyContent: "center", boxShadow: `0 6px 16px -6px rgba(199,155,70,.7)` }}>
-              <Icons.Tooth size={21} color={c.theme.gradMid} />
-            </div>
-            <div style={{ lineHeight: 1 }}>
-              <div style={{ fontSize: 15, fontWeight: 700, color: "#fff", letterSpacing: .2 }}>{c.name}</div>
-              <div style={{ fontSize: 8, fontWeight: 600, color: accent, letterSpacing: 2.4, marginTop: 3 }}>ODONTOLOGIA</div>
-            </div>
-          </div>
-          {open !== null && (
-            <div style={{ display: "flex", alignItems: "center", gap: 7, padding: "7px 12px", borderRadius: 999, background: "rgba(255,255,255,.07)", border: "1px solid rgba(255,255,255,.12)" }}>
-              <span className={open ? "live-dot" : "dead-dot"} style={{ width: 8, height: 8, borderRadius: "50%", background: open ? "#2dd36f" : "#e0a64d", display: "inline-block" }} />
-              <span style={{ fontSize: 10.5, fontWeight: 600, color: "#eaf1fb", letterSpacing: .2 }}>{open ? "Aberto agora" : "Fechado"}</span>
-            </div>
-          )}
-        </div>
-
         {/* hero */}
         <div className="rise" style={{ textAlign: "center", marginTop: 30 }}>
           <div style={{ position: "relative", width: 132, height: 132, margin: "0 auto" }}>
             <div style={{ position: "absolute", inset: -7, borderRadius: "50%", background: `conic-gradient(from 220deg, ${accent}, ${accentDark}, #8d6f2e, ${accent})` }} />
-            <div style={{ position: "absolute", inset: 0, borderRadius: "50%", border: `4px solid ${c.theme.gradMid}`, overflow: "hidden", background: "#1a3a5c", display: "flex", alignItems: "center", justifyContent: "center" }}>
+            <div style={{ position: "absolute", inset: 0, borderRadius: "50%", border: `4px solid ${c.theme.gradMid}`, overflow: "hidden", background: c.theme.gradMid, display: "flex", alignItems: "center", justifyContent: "center" }}>
               {c.photo
-                ? <img src={c.photo} alt={c.fullName} style={{ width: "100%", height: "100%", objectFit: "cover" }} />
+                ? <img src={c.photo} alt={c.fullName} style={{ width: "78%", height: "78%", objectFit: "contain" }} />
                 : <Icons.Tooth size={52} color={accent} style={{ opacity: .35 }} />
               }
             </div>
@@ -153,7 +134,7 @@ export default function LinkBioPage({ client: c }: { client: Client }) {
 
         {/* footer */}
         <div style={{ marginTop: 28 }}>
-          <div style={{ display: "flex", alignItems: "center", justifyContent: "space-between", flexWrap: "wrap", gap: 8 }}>
+          <div style={{ display: "flex", alignItems: "center", justifyContent: "center", flexWrap: "wrap", gap: 8 }}>
             <p style={{ fontSize: 10, fontWeight: 400, color: "#6f88a6", letterSpacing: .3, margin: 0 }}>{c.footer}</p>
           </div>
           <div style={{ display: "flex", alignItems: "center", justifyContent: "center", gap: 7, marginTop: 14, paddingTop: 14, borderTop: "1px solid rgba(255,255,255,.08)" }}>
