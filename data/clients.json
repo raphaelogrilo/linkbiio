@@ -1,0 +1,77 @@
+[
+  {
+    "slug": "cuidato",
+    "name": "Cuidato",
+    "fullName": "Cuidato Odontologia Avançada",
+    "tagline": "Transformando sorrisos, cultivando confiança 🦷",
+    "intro": "Sua transformação começa aqui. Agende uma avaliação e descubra o sorriso que combina com você.",
+    "cro": "CRO-MG ATIVO",
+    "photo": null,
+    "theme": {
+      "bg": "#091a2e",
+      "gradFrom": "#144476",
+      "gradMid": "#0b2745",
+      "gradTo": "#07172b",
+      "accent": "#e7c878",
+      "accentDark": "#c79b46",
+      "primary": "#2f86e0",
+      "primaryDark": "#1f5fc0"
+    },
+    "socialProof": {
+      "rating": "4,9",
+      "reviews": "+320 avaliações",
+      "followers": "1,1 mil seguidores"
+    },
+    "cta": {
+      "label": "Agendar Consulta Grátis",
+      "sub": "Resposta em poucos minutos",
+      "tag": "AVALIAÇÃO GRÁTIS",
+      "href": "https://wa.me/553183281196?text=Ol%C3%A1!%20Gostaria%20de%20agendar%20uma%20avalia%C3%A7%C3%A3o%20gratuita."
+    },
+    "whatsapp": "553183281196",
+    "address": {
+      "street": "Rua Ipanema, 95 — 4º andar",
+      "city": "Coronel Fabriciano · MG · 35170-009",
+      "mapsHref": "https://www.google.com/maps/search/?api=1&query=Rua+Ipanema+95+Coronel+Fabriciano+MG"
+    },
+    "hours": [
+      { "days": "Seg — Sex", "time": "08h — 18h" },
+      { "days": "Sábado",    "time": "08h — 12h" },
+      { "days": "Domingo",   "time": "Fechado" }
+    ],
+    "openHours": { "weekStart": 1, "weekEnd": 5, "from": 8, "to": 18 },
+    "openSat":   { "from": 8, "to": 12 },
+    "services": [
+      "Odontologia Estética",
+      "Reabilitação Oral",
+      "Implantodontia",
+      "Harmonização Facial"
+    ],
+    "links": [
+      {
+        "title": "Nossa Localização",
+        "sub": "Como chegar até a clínica",
+        "href": "https://www.google.com/maps/search/?api=1&query=Rua+Ipanema+95+Coronel+Fabriciano+MG",
+        "icon": "map"
+      },
+      {
+        "title": "Nosso Instagram",
+        "sub": "@cuidato.odonto · Conteúdo e resultados",
+        "href": "https://www.instagram.com/cuidato.odonto",
+        "icon": "instagram"
+      },
+      {
+        "title": "Dr. Túlio Sena",
+        "sub": "CEO · Especialista em Implantodontia",
+        "href": "https://www.instagram.com/dr.tuliosena",
+        "icon": "person"
+      }
+    ],
+    "socials": {
+      "instagram": "https://www.instagram.com/cuidato.odonto",
+      "whatsapp": "https://wa.me/553183281196",
+      "facebook": null
+    },
+    "footer": "© Cuidato Odontologia Avançada · CRO-MG"
+  }
+]
