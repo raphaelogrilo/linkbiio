@@ -152,14 +152,23 @@ export default function LinkBioPage({ client: c }: { client: Client }) {
         </a>
 
         {/* footer */}
-        <div style={{ marginTop: 28, display: "flex", alignItems: "center", justifyContent: "space-between", flexWrap: "wrap", gap: 8 }}>
-          <p style={{ fontSize: 10, fontWeight: 400, color: "#6f88a6", letterSpacing: .3, margin: 0 }}>{c.footer}</p>
-          {doctorLink && (
-            <a href={doctorLink.href} target="_blank" rel="noopener noreferrer" style={{ display: "flex", alignItems: "center", gap: 6, textDecoration: "none", color: "#6f88a6", fontSize: 10, letterSpacing: .2, transition: "color .18s ease" }} onMouseOver={e => (e.currentTarget.style.color = accent)} onMouseOut={e => (e.currentTarget.style.color = "#6f88a6")}>
-              <Icons.Link icon="person" size={12} color="currentColor" />
-              {doctorLink.title}
+        <div style={{ marginTop: 28 }}>
+          <div style={{ display: "flex", alignItems: "center", justifyContent: "space-between", flexWrap: "wrap", gap: 8 }}>
+            <p style={{ fontSize: 10, fontWeight: 400, color: "#6f88a6", letterSpacing: .3, margin: 0 }}>{c.footer}</p>
+            {doctorLink && (
+              <a href={doctorLink.href} target="_blank" rel="noopener noreferrer" style={{ display: "flex", alignItems: "center", gap: 6, textDecoration: "none", color: "#6f88a6", fontSize: 10, letterSpacing: .2, transition: "color .18s ease" }} onMouseOver={e => (e.currentTarget.style.color = accent)} onMouseOut={e => (e.currentTarget.style.color = "#6f88a6")}>
+                <Icons.Link icon="person" size={12} color="currentColor" />
+                {doctorLink.title}
+              </a>
+            )}
+          </div>
+          <div style={{ display: "flex", alignItems: "center", justifyContent: "center", gap: 7, marginTop: 14, paddingTop: 14, borderTop: "1px solid rgba(255,255,255,.08)" }}>
+            <span style={{ fontSize: 10, fontWeight: 400, color: "#6f88a6", letterSpacing: .3 }}>Mini site desenvolvido por</span>
+            <a href="https://www.instagram.com/raphaelogrilo/" target="_blank" rel="noopener noreferrer" aria-label="Grilo Design">
+              {/* eslint-disable-next-line @next/next/no-img-element */}
+              <img src="/logo-grilo.webp" alt="Grilo Design" style={{ height: 14, display: "block", opacity: .7, transition: "opacity .18s ease" }} onMouseOver={e => ((e.currentTarget as HTMLImageElement).style.opacity = "1")} onMouseOut={e => ((e.currentTarget as HTMLImageElement).style.opacity = ".7")} />
             </a>
-          )}
+          </div>
         </div>
 
       </div>
