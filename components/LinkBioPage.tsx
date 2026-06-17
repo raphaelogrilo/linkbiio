@@ -109,8 +109,8 @@ export default function LinkBioPage({ client: c }: { client: Client }) {
           </div>
         </div>
 
-        {/* instagram + other main links */}
-        {mainLinks.map((link, i) => (
+        {/* instagram + other main links + doctor */}
+        {[...mainLinks, ...(doctorLink ? [doctorLink] : [])].map((link, i) => (
           <a key={i} href={link.href} target="_blank" rel="noopener noreferrer" className="link-card btn-hover" style={{ display: "flex", alignItems: "center", gap: 14, marginTop: 13, padding: "15px 17px", borderRadius: 18, background: "rgba(255,255,255,.055)", border: "1px solid rgba(255,255,255,.1)", textDecoration: "none", backdropFilter: "blur(6px)", transition: "transform .18s ease, background .18s ease, border-color .18s ease" }}>
             <div style={{ width: 42, height: 42, borderRadius: 12, background: `rgba(${rgb},.14)`, display: "flex", alignItems: "center", justifyContent: "center", flexShrink: 0, color: accent }}>
               <Icons.Link icon={link.icon as "map" | "instagram" | "person"} size={20} />
@@ -155,12 +155,6 @@ export default function LinkBioPage({ client: c }: { client: Client }) {
         <div style={{ marginTop: 28 }}>
           <div style={{ display: "flex", alignItems: "center", justifyContent: "space-between", flexWrap: "wrap", gap: 8 }}>
             <p style={{ fontSize: 10, fontWeight: 400, color: "#6f88a6", letterSpacing: .3, margin: 0 }}>{c.footer}</p>
-            {doctorLink && (
-              <a href={doctorLink.href} target="_blank" rel="noopener noreferrer" style={{ display: "flex", alignItems: "center", gap: 6, textDecoration: "none", color: "#6f88a6", fontSize: 10, letterSpacing: .2, transition: "color .18s ease" }} onMouseOver={e => (e.currentTarget.style.color = accent)} onMouseOut={e => (e.currentTarget.style.color = "#6f88a6")}>
-                <Icons.Link icon="person" size={12} color="currentColor" />
-                {doctorLink.title}
-              </a>
-            )}
           </div>
           <div style={{ display: "flex", alignItems: "center", justifyContent: "center", gap: 7, marginTop: 14, paddingTop: 14, borderTop: "1px solid rgba(255,255,255,.08)" }}>
             <span style={{ fontSize: 10, fontWeight: 400, color: "#6f88a6", letterSpacing: .3 }}>Mini site desenvolvido por</span>
